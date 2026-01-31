@@ -426,7 +426,7 @@ st.sidebar.markdown(
     We’re actively improving **AdityaAI** 🚀  
     Share your feedback, feature requests, or bugs.
     
-    👉 [Submit Feedback](https://forms.gle/https://www.linkedin.com/safety/go?url=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSdJtM2cM3G_P9ZynAEbF85GdK8u7bkPxYIDhZqhLvEV2syYJQ%2Fviewform&trk=flagship-messaging-web&messageThreadUrn=urn%3Ali%3AmessagingThread%3A2-NzBkNDJiNjctMWI4Mi00NDFlLWJkZDgtMjg1MGI1YTIxNTJhXzEwMA%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Bglx4lMLTQqGCiDk6SIttzg%3D%3D)
+    👉 [Submit Feedback](https://docs.google.com/forms/d/e/1FAIpQLSdJtM2cM3G_P9ZynAEbF85GdK8u7bkPxYIDhZqhLvEV2syYJQ/viewform)
     """,
     unsafe_allow_html=True
 )
