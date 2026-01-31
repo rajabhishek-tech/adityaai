@@ -90,20 +90,22 @@ def add_background_image(image_path):
             font-weight: 500;
         }}
 
-        /* ================= METRICS ================= */
+        /* ================= METRICS (FIX VALUES VISIBILITY) ================= */
         div[data-testid="metric-container"] {{
-            background-color: rgba(255,255,255,0.95);
+            background-color: rgba(255,255,255,0.96);
             border-radius: 14px;
             padding: 1rem;
         }}
 
         div[data-testid="metric-container"] label {{
-            color: #555555 !important;
+            color: #444444 !important;
+            font-weight: 600;
         }}
 
         div[data-testid="metric-container"] div {{
             color: #000000 !important;
-            font-weight: 700;
+            font-weight: 800 !important;
+            font-size: 1.4rem;
         }}
 
         /* ================= INPUTS ================= */
@@ -113,6 +115,16 @@ def add_background_image(image_path):
             background-color: #ffffff !important;
             color: #000000 !important;
             border-radius: 10px;
+        }}
+
+        /* ================= RADIO / ML MODE SELECTOR ================= */
+        div[role="radiogroup"] label {{
+            color: #111111 !important;
+            font-weight: 600;
+        }}
+
+        div[role="radiogroup"] span {{
+            color: #000000 !important;
         }}
 
         /* ================= FILE UPLOADER ================= */
@@ -126,7 +138,7 @@ def add_background_image(image_path):
             color: #000000 !important;
         }}
 
-        /* ================= TABS (EDA / AI / BUSINESS) ================= */
+        /* ================= TABS ================= */
         button[data-baseweb="tab"] {{
             color: #222222 !important;
             font-weight: 600;
@@ -140,6 +152,11 @@ def add_background_image(image_path):
         .stDataFrame {{
             background-color: #ffffff;
             color: #000000;
+        }}
+
+        /* ================= SIDEBAR ================= */
+        section[data-testid="stSidebar"] * {{
+            color: #eaeaea !important;
         }}
 
         </style>
