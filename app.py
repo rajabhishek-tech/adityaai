@@ -313,20 +313,3 @@ st.sidebar.markdown(
     unsafe_allow_html=True
 )
 
-# ---------------- FEEDBACK ----------------
-st.sidebar.markdown("---")
-st.sidebar.markdown("### 💬 Give Feedback")
-
-st.sidebar.info(
-    "💡 **Help us improve AdityaAI**\n\n"
-    "Please mention:\n"
-    "• What dataset you used\n"
-    "• What worked well\n"
-    "• What confused you\n"
-    "• Features you want next"
-)
-
-st.sidebar.markdown(
-    "👉 [Submit Feedback](https://forms.gle/YOUR_GOOGLE_FORM_LINK)",
-    unsafe_allow_html=True
-)
