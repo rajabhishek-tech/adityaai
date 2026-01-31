@@ -62,19 +62,46 @@ def add_background_image(image_path):
     st.markdown(
         f"""
         <style>
+        /* App background */
         .stApp {{
             background-image: url("data:image/png;base64,{encoded}");
             background-size: cover;
+            background-position: center;
         }}
+
+        /* Main white container */
         .block-container {{
-            background-color: rgba(255,255,255,0.9);
+            background-color: rgba(255, 255, 255, 0.82);
             padding: 2rem;
             border-radius: 16px;
+            max-width: 95%;
+        }}
+
+        /* FORCE text visibility */
+        h1, h2, h3, h4, h5, h6, p, span, label, div {{
+            color: #111 !important;
+        }}
+
+        /* Fix metric numbers (Rows / Columns) */
+        [data-testid="stMetricValue"] {{
+            color: #000 !important;
+            font-weight: 700;
+        }}
+
+        [data-testid="stMetricLabel"] {{
+            color: #333 !important;
+        }}
+
+        /* Fix dataframe headers */
+        thead tr th {{
+            color: #000 !important;
+            background-color: rgba(255,255,255,0.95) !important;
         }}
         </style>
         """,
         unsafe_allow_html=True
     )
+
 
 
 #st.set_page_config(page_title="AdityaAI – EDA Studio", layout="wide")
