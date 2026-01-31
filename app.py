@@ -62,92 +62,86 @@ def add_background_image(image_path):
     st.markdown(
         f"""
         <style>
-        /* App background */
+        /* ================= APP BACKGROUND ================= */
         .stApp {{
             background-image: url("data:image/png;base64,{encoded}");
             background-size: cover;
             background-position: center;
         }}
 
-        /* Main content card */
+        /* ================= MAIN CONTENT CARD ================= */
         .block-container {{
             background-color: rgba(255, 255, 255, 0.88);
             padding: 2rem;
             border-radius: 18px;
         }}
 
-        /* -------- FIX INPUT VISIBILITY -------- */
-
-        /* Labels */
-        label, .stMarkdown p {{
+        /* ================= HEADINGS ================= */
+        h1, h2, h3, h4, h5, h6 {{
             color: #111111 !important;
+            font-weight: 700;
+        }}
+
+        /* ================= NORMAL TEXT ================= */
+        .stMarkdown p,
+        .stMarkdown span,
+        label {{
+            color: #1a1a1a !important;
             font-weight: 500;
         }}
 
-        /* Selectbox, text input, file uploader */
+        /* ================= METRICS ================= */
+        div[data-testid="metric-container"] {{
+            background-color: rgba(255,255,255,0.95);
+            border-radius: 14px;
+            padding: 1rem;
+        }}
+
+        div[data-testid="metric-container"] label {{
+            color: #555555 !important;
+        }}
+
+        div[data-testid="metric-container"] div {{
+            color: #000000 !important;
+            font-weight: 700;
+        }}
+
+        /* ================= INPUTS ================= */
         div[data-baseweb="select"] > div,
         .stTextInput > div > div,
-        .stFileUploader > div {{
+        .stNumberInput > div > div {{
             background-color: #ffffff !important;
             color: #000000 !important;
             border-radius: 10px;
         }}
 
-        /* Tabs text */
-        button[data-baseweb="tab"] {{
-            color: #000000 !important;
-            font-weight: 600;
-        }}
-
-        /* Active tab underline */
-        button[data-baseweb="tab"][aria-selected="true"] {{
-            border-bottom: 3px solid #ff4b4b !important;
-        }}
-
-        /* File uploader drag area */
+        /* ================= FILE UPLOADER ================= */
         section[data-testid="stFileUploader"] {{
             background-color: #ffffff !important;
             border: 2px dashed #999999;
             border-radius: 12px;
         }}
 
-         /* ---------- TEXT VISIBILITY FIX ---------- */
-h1, h2, h3, h4, h5, h6 {
-    color: #111111 !important;
-    font-weight: 700;
-}
+        section[data-testid="stFileUploader"] * {{
+            color: #000000 !important;
+        }}
 
-p, span, div, label {
-    color: #1a1a1a !important;
-}
+        /* ================= TABS (EDA / AI / BUSINESS) ================= */
+        button[data-baseweb="tab"] {{
+            color: #222222 !important;
+            font-weight: 600;
+        }}
 
-/* ---------- METRICS FIX ---------- */
-div[data-testid="metric-container"] {
-    background-color: rgba(255,255,255,0.95);
-    border-radius: 14px;
-    padding: 1rem;
-}
+        button[data-baseweb="tab"][aria-selected="true"] {{
+            border-bottom: 3px solid #ff4b4b !important;
+        }}
 
-div[data-testid="metric-container"] label {
-    color: #444444 !important;
-}
+        /* ================= DATAFRAME ================= */
+        .stDataFrame {{
+            background-color: #ffffff;
+            color: #000000;
+        }}
 
-div[data-testid="metric-container"] div {
-    color: #000000 !important;
-    font-weight: 700;
-}
-
-/* ---------- TABS (EDA: Summary / Missing / Visuals) ---------- */
-button[data-baseweb="tab"] {
-    color: #222222 !important;
-    font-weight: 600;
-}
-
-/* ---------- DATAFRAME TEXT ---------- */
-.stDataFrame {
-    background-color: white;
-    color: black;
-}
         </style>
         """,
         unsafe_allow_html=True
