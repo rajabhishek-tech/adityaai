@@ -1,7 +1,12 @@
 import streamlit as st
 import pandas as pd
 import base64
+import time
 
+# ---------------- APP WARM-UP ----------------
+with st.spinner("🔄 Warming up AdityaAI engine..."):
+    time.sleep(1.5) 
+    
 # ---------------- IMPORTS ----------------
 from utils.loader import load_data
 
