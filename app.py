@@ -71,41 +71,51 @@ def add_background_image(image_path):
 
         /* Main content card */
         .block-container {{
-            background-color: rgba(255,255,255,0.88);
+            background-color: rgba(255, 255, 255, 0.88);
             padding: 2rem;
-            border-radius: 16px;
+            border-radius: 18px;
         }}
 
-        /* 🔴 FIX ALL TEXT VISIBILITY */
-        .block-container * {{
+        /* -------- FIX INPUT VISIBILITY -------- */
+
+        /* Labels */
+        label, .stMarkdown p {{
             color: #111111 !important;
+            font-weight: 500;
         }}
 
-        /* Headings stay strong */
-        h1, h2, h3, h4 {{
+        /* Selectbox, text input, file uploader */
+        div[data-baseweb="select"] > div,
+        .stTextInput > div > div,
+        .stFileUploader > div {{
+            background-color: #ffffff !important;
             color: #000000 !important;
+            border-radius: 10px;
         }}
 
-        /* Sidebar */
-        section[data-testid="stSidebar"] * {{
-            color: #ffffff !important;
-        }}
-
-        /* Tabs */
+        /* Tabs text */
         button[data-baseweb="tab"] {{
-            color: #111111 !important;
+            color: #000000 !important;
             font-weight: 600;
         }}
 
+        /* Active tab underline */
         button[data-baseweb="tab"][aria-selected="true"] {{
-            color: #ff4b4b !important;
-            border-bottom: 3px solid #ff4b4b;
+            border-bottom: 3px solid #ff4b4b !important;
+        }}
+
+        /* File uploader drag area */
+        section[data-testid="stFileUploader"] {{
+            background-color: #ffffff !important;
+            border: 2px dashed #999999;
+            border-radius: 12px;
         }}
 
         </style>
         """,
         unsafe_allow_html=True
     )
+
 
 
 
