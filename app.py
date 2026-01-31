@@ -69,20 +69,33 @@ def add_background_image(image_path):
             background-position: center;
         }}
 
-        /* Main white container */
+        /* Main container */
         .block-container {{
-            background-color: rgba(255, 255, 255, 0.82);
+            background-color: rgba(255,255,255,0.82);
             padding: 2rem;
             border-radius: 16px;
             max-width: 95%;
         }}
 
-        /* FORCE text visibility */
-        h1, h2, h3, h4, h5, h6, p, span, label, div {{
-            color: #111 !important;
+        /* -------- FILE UPLOADER HIGHLIGHT -------- */
+        section[data-testid="stFileUploader"] {{
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 1.5rem;
+            border-radius: 14px;
+            border: 2px dashed #ff4b4b;
         }}
 
-        /* Fix metric numbers (Rows / Columns) */
+        section[data-testid="stFileUploader"] label {{
+            color: #ffffff !important;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }}
+
+        section[data-testid="stFileUploader"] small {{
+            color: #dddddd !important;
+        }}
+
+        /* Metrics visibility */
         [data-testid="stMetricValue"] {{
             color: #000 !important;
             font-weight: 700;
@@ -91,16 +104,11 @@ def add_background_image(image_path):
         [data-testid="stMetricLabel"] {{
             color: #333 !important;
         }}
-
-        /* Fix dataframe headers */
-        thead tr th {{
-            color: #000 !important;
-            background-color: rgba(255,255,255,0.95) !important;
-        }}
         </style>
         """,
         unsafe_allow_html=True
     )
+
 
 
 
