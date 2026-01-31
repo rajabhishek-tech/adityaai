@@ -69,40 +69,30 @@ def add_background_image(image_path):
             background-position: center;
         }}
 
-        /* Main container */
+        /* Main content container */
         .block-container {{
-            background-color: rgba(255,255,255,0.82);
+            background-color: rgba(255,255,255,0.85);
             padding: 2rem;
             border-radius: 16px;
-            max-width: 95%;
         }}
 
-        /* -------- FILE UPLOADER HIGHLIGHT -------- */
-        section[data-testid="stFileUploader"] {{
-            background-color: rgba(0, 0, 0, 0.85);
-            padding: 1.5rem;
-            border-radius: 14px;
-            border: 2px dashed #ff4b4b;
-        }}
-
-        section[data-testid="stFileUploader"] label {{
-            color: #ffffff !important;
-            font-size: 1.1rem;
+        /* -------- TABS FIX -------- */
+        button[data-baseweb="tab"] {{
+            color: #000000 !important;
             font-weight: 600;
+            font-size: 1rem;
         }}
 
-        section[data-testid="stFileUploader"] small {{
-            color: #dddddd !important;
+        button[data-baseweb="tab"][aria-selected="true"] {{
+            color: #ff4b4b !important;
+            border-bottom: 3px solid #ff4b4b;
         }}
 
-        /* Metrics visibility */
-        [data-testid="stMetricValue"] {{
-            color: #000 !important;
-            font-weight: 700;
-        }}
-
-        [data-testid="stMetricLabel"] {{
-            color: #333 !important;
+        /* Tab bar background */
+        div[data-baseweb="tab-list"] {{
+            background-color: rgba(255,255,255,0.9);
+            border-radius: 12px;
+            padding: 0.4rem;
         }}
         </style>
         """,
