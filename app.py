@@ -5,7 +5,7 @@ import time
 
 
 st.set_page_config(page_title="AdityaAI – EDA Studio", layout="wide")
-add_background_image("assets/background.jpg")
+#add_background_image("assets/background.jpg")
 
 # ---------------- APP WARM-UP ----------------
 with st.spinner("🔄 Warming up AdityaAI engine..."):
@@ -78,7 +78,8 @@ def add_background_image(image_path):
 
 
 #st.set_page_config(page_title="AdityaAI – EDA Studio", layout="wide")
-#add_background_image("assets/background.jpg")
+
+add_background_image("assets/background.jpg")
 
 
 
