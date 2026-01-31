@@ -111,6 +111,43 @@ def add_background_image(image_path):
             border-radius: 12px;
         }}
 
+         /* ---------- TEXT VISIBILITY FIX ---------- */
+h1, h2, h3, h4, h5, h6 {
+    color: #111111 !important;
+    font-weight: 700;
+}
+
+p, span, div, label {
+    color: #1a1a1a !important;
+}
+
+/* ---------- METRICS FIX ---------- */
+div[data-testid="metric-container"] {
+    background-color: rgba(255,255,255,0.95);
+    border-radius: 14px;
+    padding: 1rem;
+}
+
+div[data-testid="metric-container"] label {
+    color: #444444 !important;
+}
+
+div[data-testid="metric-container"] div {
+    color: #000000 !important;
+    font-weight: 700;
+}
+
+/* ---------- TABS (EDA: Summary / Missing / Visuals) ---------- */
+button[data-baseweb="tab"] {
+    color: #222222 !important;
+    font-weight: 600;
+}
+
+/* ---------- DATAFRAME TEXT ---------- */
+.stDataFrame {
+    background-color: white;
+    color: black;
+}
         </style>
         """,
         unsafe_allow_html=True
