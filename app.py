@@ -185,17 +185,27 @@ add_background_image("assets/background.jpg")
 def show_home():
     st.title("🚀 AdityaAI – Intelligent EDA Studio")
 
-    uploaded = st.file_uploader("Upload CSV or Excel", ["csv", "xlsx"])
-    if uploaded:
+    uploaded = st.file_uploader(
+        "Upload CSV or Excel",
+        ["csv", "xlsx"]
+    )
+
+    # ✅ Load only once
+    if uploaded and st.session_state.df is None:
         df = load_data(uploaded)
         st.session_state.df = df
         st.success("Dataset loaded ✅")
+
+    # ✅ If dataset already exists, keep showing it
+    if st.session_state.df is not None:
+        df = st.session_state.df
 
         c1, c2 = st.columns(2)
         c1.metric("Rows", df.shape[0])
         c2.metric("Columns", df.shape[1])
 
         st.dataframe(df.head())
+
 
 
 # =========================
