@@ -69,18 +69,32 @@ def add_background_image(image_path):
             background-position: center;
         }}
 
-        /* Main content container */
+        /* Main content card */
         .block-container {{
-            background-color: rgba(255,255,255,0.85);
+            background-color: rgba(255,255,255,0.88);
             padding: 2rem;
             border-radius: 16px;
         }}
 
-        /* -------- TABS FIX -------- */
-        button[data-baseweb="tab"] {{
+        /* 🔴 FIX ALL TEXT VISIBILITY */
+        .block-container * {{
+            color: #111111 !important;
+        }}
+
+        /* Headings stay strong */
+        h1, h2, h3, h4 {{
             color: #000000 !important;
+        }}
+
+        /* Sidebar */
+        section[data-testid="stSidebar"] * {{
+            color: #ffffff !important;
+        }}
+
+        /* Tabs */
+        button[data-baseweb="tab"] {{
+            color: #111111 !important;
             font-weight: 600;
-            font-size: 1rem;
         }}
 
         button[data-baseweb="tab"][aria-selected="true"] {{
@@ -88,12 +102,6 @@ def add_background_image(image_path):
             border-bottom: 3px solid #ff4b4b;
         }}
 
-        /* Tab bar background */
-        div[data-baseweb="tab-list"] {{
-            background-color: rgba(255,255,255,0.9);
-            border-radius: 12px;
-            padding: 0.4rem;
-        }}
         </style>
         """,
         unsafe_allow_html=True
